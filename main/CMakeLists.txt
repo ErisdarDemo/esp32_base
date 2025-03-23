@@ -1,10 +1,26 @@
-# See the build system documentation in IDF programming guide
-# for more information about component CMakeLists.txt files.
+####################################################################################################
+ #  @file     CMakeLists.txt
+ #  @brief    Component Description
+ #  @details  x
+ #
+ #  @section 	Detail
+ #      See the build system documentation in IDF programming guide for more information about 
+ #		component CMakeLists.txt files
+ #
+####################################################################################################
 
+# Directory Build Configuration
 idf_component_register(
-    SRCS main.c         # list the source files of this component
-    INCLUDE_DIRS        # optional, add here public include directories
-    PRIV_INCLUDE_DIRS   # optional, add here private include directories
-    REQUIRES            # optional, list the public requirements (component names)
-    PRIV_REQUIRES       # optional, list the private requirements
-)
+				       SRCS         				# Component source files
+				         "main.c" 
+
+				       INCLUDE_DIRS        			# Public include directories
+
+				       PRIV_INCLUDE_DIRS   			# Private include directories
+
+				       REQUIRES            			# Public requirements (component names)
+
+				       PRIV_REQUIRES       			# Private requirements
+
+                      )
+

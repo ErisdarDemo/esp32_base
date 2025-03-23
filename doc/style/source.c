@@ -13,7 +13,7 @@
  *      none current
  *
  *  @section    Legal Disclaimer
- *      ©2025 Justin Reina. All rights reserved. All contents of this source file and/or any other
+ *      � 2025 Justin Reina, All rights reserved. All contents of this source file and/or any other
  *      related source files are the explicit property of Justin Reina. Do not distribute.
  *      Do not copy.
  */
@@ -25,9 +25,7 @@
 //************************************************************************************************//
 
 //Standard Library Includes
-#include <stdio.h>
-#include <stdbool.h>
-#include <unistd.h>
+
 
 //Library Includes
 
@@ -52,8 +50,6 @@
 //------------------------------------------- Typedefs -------------------------------------------//
 
 
-
-
 //************************************************************************************************//
 //                                            VARIABLES                                           //
 //************************************************************************************************//
@@ -69,29 +65,54 @@
 //************************************************************************************************//
 
 /**************************************************************************************************/
-/** @fcn        void app_main(void)
- *  @brief      Application entry to operation, called after FreeRTOS begins
- *  @details    Running on core for main thread
+/** @fcn        void sample_fcn(void)
+ *  @brief      x
+ *  @details    x
  *
- *  @return   no return
+ *  @section    Purpose
+ *      x
+ *
+ *  @param    [in]  name    descrip
+ *
+ *  @param    [out] name    descrip
+ *
+ *  @return   (type) descrip
+ *
+ *  @pre    x
+ *
+ *  @post   x
+ *
+ *  @section    Operation
+ *      x
+ *
+ *  @section    Opens
+ *      x
+ *
+ *  @section    Hazards & Risks
+ *      x
+ *
+ *  @section    Todo
+ *      x
+ *
+ *  @section    Timing
+ *      x
+ *
+ *  @note   x
  */
 /**************************************************************************************************/
-void app_main(void) {
+void sample_fcn(void) {
 
-    //--------------------------------------- Application ----------------------------------------//
+    //Locals
 
-    for(;;) {
 
-    	//------------------------------------- Update -------------------------------------------//
-		
-		//Notify
-        printf("Hello from app_main!\n");
+    //---------------------------------------- Initialize ----------------------------------------//
 
-	    //------------------------------------- Reset --------------------------------------------//
-        
-        //Delay
-        sleep(1);
-    }
+
+    //------------------------------------------ Operate -----------------------------------------//
+
+
+
+	return;
 }
 
 
