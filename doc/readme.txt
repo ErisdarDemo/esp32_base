@@ -6,11 +6,11 @@
 
 @section 	Target
 	
-	ESP32-S3 in Waveshare ESP32-S3-Touch-LCD-4.3B unit 
+	• MCU: ESP32-S3 (Waveshare ESP32-S3-Touch-LCD-4.3B)
 	
-	Espressif-IDE v3.1.9
+	• IDE: Espressif-IDE v3.1.9
 	
-	ESP-IDF v5.4
+	• SDK: ESP-IDF v5.4
 	
 @section 	Procedure
 	
@@ -19,4 +19,8 @@
 		Project Target: esp32s3
 	
 		Prroject Template: None
+
+@section 	Disclaimer
+	
+	Leave filesystem as configured by the IDE and/or toolchain whenever possible, renaming or relocating contents only when required
 

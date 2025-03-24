@@ -5,5 +5,6 @@
 
 
 @section 	Notes
-	x
+	
+	'console.png' is reported to the development console for 'v1' demonstration
 
