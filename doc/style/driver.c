@@ -36,7 +36,10 @@
 //BSP Includes
 
 //Project Includes
+<<<<<<< HEAD
 #include "driver.h"
+=======
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
 
 
 //************************************************************************************************//
@@ -87,17 +90,28 @@ void driver_init(DriverConfig *cfg) {
 
     //Locals
 
+<<<<<<< HEAD
     
+=======
+	
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
     //---------------------------------------- Initialize ----------------------------------------//
 
 
     //------------------------------------------ Operate -----------------------------------------//
 
 
+<<<<<<< HEAD
     //Notify
     printf("driver_init(): Driver initialization complete\n");
     
     return;
+=======
+	//Notify
+	printf("driver_init(): Driver initialization complete\n");
+	
+	return;
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
 }
 
 
@@ -126,7 +140,11 @@ void driver_enable(void) {
  */
 /**************************************************************************************************/
  void driver_disable(void) {
+<<<<<<< HEAD
     
+=======
+	
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
     return;
 }
 
@@ -165,7 +183,11 @@ void driver_start(void) {
  */
 /**************************************************************************************************/
 void driver_stop(void) {
+<<<<<<< HEAD
     
+=======
+	
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
     return;
 }
 
@@ -182,7 +204,11 @@ void driver_stop(void) {
  */
 /**************************************************************************************************/
 void *driver_status(void) {
+<<<<<<< HEAD
     
+=======
+	
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
     return 0;
 }
 
@@ -197,7 +223,11 @@ void *driver_status(void) {
  */
 /**************************************************************************************************/
 void driver_reset(void) {
+<<<<<<< HEAD
     
+=======
+	
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
     return;
 }
  
@@ -214,7 +244,11 @@ void driver_reset(void) {
  */
 /**************************************************************************************************/
 void driver_setConfig(DriverConfig *cfg) {
+<<<<<<< HEAD
     
+=======
+	
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
     return;
 }
  
@@ -231,7 +265,11 @@ void driver_setConfig(DriverConfig *cfg) {
  */
 /**************************************************************************************************/
 DriverConfig *driver_getConfig(void) {
+<<<<<<< HEAD
     
+=======
+	
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
     return 0;
 }
 
@@ -248,7 +286,11 @@ DriverConfig *driver_getConfig(void) {
  */
 /**************************************************************************************************/
 void *driver_getInfo(void) {
+<<<<<<< HEAD
     
+=======
+	
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
     return 0;
 }
 
@@ -265,7 +307,11 @@ void *driver_getInfo(void) {
  */
 /**************************************************************************************************/
 int driver_getState(void) {
+<<<<<<< HEAD
     
+=======
+	
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
     return 0;
 }
 
@@ -282,7 +328,11 @@ int driver_getState(void) {
  */
 /**************************************************************************************************/
  void driver_setState(int val) {
+<<<<<<< HEAD
     
+=======
+	
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
     return;
 }
 
@@ -299,7 +349,11 @@ int driver_getState(void) {
  */
 /**************************************************************************************************/
 int driver_read(void) {
+<<<<<<< HEAD
     
+=======
+	
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
     return 0;
 }
 
@@ -323,7 +377,11 @@ void driver_write(int val) {
 
 /**************************************************************************************************/
 /** @fcn        void *driver_getLog(void)
+<<<<<<< HEAD
  *  @brief      Retrieve log history for Driver operations
+=======
+ *  @brief      Retrieve log history for operations
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
  *  @details    x
  *
  *  @return   (void *) log file access handle
@@ -332,7 +390,11 @@ void driver_write(int val) {
  */
 /**************************************************************************************************/
 void *driver_getLog(void) {
+<<<<<<< HEAD
     
+=======
+	
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
     return 0;
 }
 

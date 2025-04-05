@@ -3,9 +3,15 @@
  *  @brief      x
  *  @details    x
  *
+<<<<<<< HEAD
  *  @author     Justin Reina, Firmware Engineer
  *  @created    2/3/25
  *  @last rev   4/5/25
+=======
+ *  @author   Justin Reina, Firmware Engineer
+ *  @created  2/3/25
+ *  @last rev 4/3/25
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
  *
  *  @note   Private functions & variables are declared static
  *
@@ -25,7 +31,10 @@
 //************************************************************************************************//
 
 //Standard Library Includes
+<<<<<<< HEAD
 #include <stdlib.h>
+=======
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
 
 //Library Includes
 

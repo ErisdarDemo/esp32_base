@@ -2,4 +2,4 @@ CompileFlags:
   CompilationDatabase: build
   Remove: [-m*, -f*]
 InlayHints:
-	  Enabled: No
+  Enabled: No

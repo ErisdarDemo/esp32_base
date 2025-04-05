@@ -10,9 +10,12 @@
 	 
 	ICSP: USB-OTG ('JTAG')
 	
+	Putty: 115200 bps, 8 data bit, 1 stop bit, no parity, no flow ctl
+	
 @section 	Demo 
 
-	Run the application in debug mode through Espressif-IDE, capturing the console output to PuTTy.
+	Run the application in JTAG debug mode through Espressif-IDE, capturing the
+	console output to PuTTy.
 
 @section 	Notes
 	x

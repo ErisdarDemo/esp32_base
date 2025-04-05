@@ -3,9 +3,15 @@
  *  @brief    x
  *  @details  x
  *
+<<<<<<< HEAD
  *  @author     Justin Reina, Firmware Engineer
  *  @created    1/15/25
  *  @last rev   4/5/25
+=======
+ *  @author   Justin Reina, Firmware Engineer
+ *  @created  1/15/25
+ *  @last rev 4/3/25
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
  *
  *
  *  @notes    x
@@ -75,9 +81,15 @@
  * @brief       content header notes providing detail
  * @details     useful with code organization & flow
  */
+<<<<<<< HEAD
 #define EXAMPLE_DEF_ONE     (123)
 #define EXAMPLE_DEF_TWO     (456)
 #define EXAMPLE_DEF_THREE   (789)
+=======
+#define EXAMPLE_DEF_ONE 	(123)
+#define EXAMPLE_DEF_TWO 	(456)
+#define EXAMPLE_DEF_THREE 	(789)
+>>>>>>> 5459203 ((+)    add app_main() template with core/mcu, core/rtos & core/system components)
 
 
 // PROTOTYPES, DECLARATIONS AND PREPROC-----------------------------------------------------------//

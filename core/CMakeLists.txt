@@ -11,10 +11,16 @@ idf_component_register(
 					   SRC_DIRS
 					     "."
 					     "../lbr"
+					     "mcu"
+					     "rtos"
+					     "system"
 					   PRIV_REQUIRES
 					     spi_flash
 					   INCLUDE_DIRS
 					     "." 
 					     "../lbr"
+					     "mcu"
+					     "rtos"
+					     "system"
 					  )
 
