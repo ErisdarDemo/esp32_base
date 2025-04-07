@@ -24,6 +24,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/README.md</locationURI>
 		</link>
 		<link>
+			<name>appl</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>core</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
@@ -39,14 +44,29 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
+			<name>appl/demo.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/appl/demo.c</locationURI>
+		</link>
+		<link>
+			<name>appl/demo.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/appl/demo.cpp</locationURI>
+		</link>
+		<link>
+			<name>appl/demo.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/appl/demo.h</locationURI>
+		</link>
+		<link>
 			<name>core/CMakeLists.txt</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/core/CMakeLists.txt</locationURI>
 		</link>
 		<link>
-			<name>core/main.c</name>
+			<name>core/main.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/core/main.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/core/main.cpp</locationURI>
 		</link>
 		<link>
 			<name>core/main.h</name>
@@ -142,6 +162,11 @@
 			<name>doc/style/source.c</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/doc/style/source.c</locationURI>
+		</link>
+		<link>
+			<name>doc/style/source.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/doc/style/source.cpp</locationURI>
 		</link>
 		<link>
 			<name>doc/style/source.h</name>

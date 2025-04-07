@@ -14,6 +14,7 @@ idf_component_register(
 					     "mcu"
 					     "rtos"
 					     "system"
+					     "../appl"
 					   PRIV_REQUIRES
 					     spi_flash
 					   INCLUDE_DIRS
@@ -22,5 +23,9 @@ idf_component_register(
 					     "mcu"
 					     "rtos"
 					     "system"
+					     "../appl"
 					  )
+
+# Can it go here?
+target_compile_options(${COMPONENT_LIB} PRIVATE -std=gnu++11)
 

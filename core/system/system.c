@@ -2,6 +2,9 @@
 /** @file     system.c
  *  @brief    Application system component
  *  @details  x
+ *
+ *	@section 	Opens
+ *		Consider value & utility for System.initialize() C++ migration 
  */
 /**************************************************************************************************/
 

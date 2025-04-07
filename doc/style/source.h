@@ -65,6 +65,20 @@
 
 //Public
 
+class MyPeripheral {
+
+public:
+    virtual void init() = 0;
+    
+    virtual int readData() = 0;
+    
+    virtual void writeData(int data) = 0;
+};
+
+#endif
+
+
+
 
 //Private
 

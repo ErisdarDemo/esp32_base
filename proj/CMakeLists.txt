@@ -15,6 +15,9 @@ set(EXTRA_COMPONENT_DIRS ${CMAKE_CURRENT_LIST_DIR}/../core)
 # Root Cmake Config 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 
+# Can it go here?
+# target_compile_options(${COMPONENT_LIB} PRIVATE -std=gnu++11)
+
 # PROJECT_NAME
 project(esp32_proj)
 
