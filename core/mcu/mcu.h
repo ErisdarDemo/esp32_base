@@ -6,7 +6,7 @@
 //************************************************************************************************//
 
 //Public
-extern void mcu_print_info(void);					/* and section divs (e.g. 'DECLARATIONS' here)
-													   are also not recommended for lightweight 
-													   interface files like this either - 'KISS'  */
+extern void mcu_print_info(void);                   /* and section divs (e.g. 'DECLARATIONS' here)
+                                                       are also not recommended for lightweight 
+                                                       interface files like this either - 'KISS'  */
 #endif /* CORE_MCU_H_ */
