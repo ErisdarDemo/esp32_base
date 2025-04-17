@@ -1,12 +1,3 @@
-/**************************************************************************************************/
-/** @file     utils.h
- *  @brief    Utils Interface File
- *  @details  x
- *
- *  @section    Notes
- *      Interface file headers like this are not recommended in preference for the source header
- */
-/**************************************************************************************************/
 #ifndef LBR_UTILS_H_
 #define LBR_UTILS_H_
 

@@ -9,3 +9,4 @@
 extern void rtos_init(void);
 
 #endif /* CORE_RTOS_RTOS_H_ */
+
