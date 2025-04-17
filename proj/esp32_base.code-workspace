@@ -13,8 +13,10 @@
 			"path": "../lbr"
 		},
 		{
-			"name": "core",
 			"path": "../core"
+		},
+		{
+			"path": "../appl"
 		}
 	],
 	"settings": {
@@ -28,7 +30,8 @@
 			"esp_flash.h": "c",
 			"stdbool.h": "c",
 			"esp_system.h": "c",
-			"utils.h": "c"
+			"utils.h": "c",
+			"system.h": "c"
 		},
 	}
 }
