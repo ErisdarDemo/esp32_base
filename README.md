@@ -20,3 +20,6 @@ ESP32 Base Project for new development
 
 - core\system - Application setup & configure
 
+# Version History
+
+- v1 - Initial C application template

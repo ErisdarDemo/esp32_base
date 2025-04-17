@@ -3,8 +3,8 @@
  *  @brief      source.c interface API 
  *  @details    interface file header is typically omitted in preference for source file header
  *
- *  @section 	Opens
- *  	function declarations from source.c & source.cpp
+ *  @section    Opens
+ *      function declarations from source.c & source.cpp
  */
 /**************************************************************************************************/
 #ifndef DIR_SOURCE_H

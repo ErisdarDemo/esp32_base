@@ -5,7 +5,7 @@
  *
  *  @author   Justin Reina, Firmware Engineer
  *  @created  4/16/25
- *  @last rev 4/16/25
+ *  @last rev 4/17/25
  *
  *  @note   Private functions & variables are declared static
  *
@@ -27,18 +27,8 @@
 //Standard Library Includes
 #include <stdio.h>
 
-//SDK Includes
-#include "sdkconfig.h"
-
-//FreeRTOS Includes
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-
 //Project Includes
-#include "main.h"
-#include "mcu.h"
 #include "system.h"
-#include "utils.h"
 
 //Application Includes
 #include "demo.h"

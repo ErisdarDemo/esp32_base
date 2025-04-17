@@ -15,6 +15,10 @@
 //Standard Library Includes
 #include <stdio.h>
 
+//FreeRTOS Includes
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+
 //Project Includes
 #include "mcu.h"
 #include "rtos.h"
@@ -33,7 +37,7 @@
  *  @return   (status_code) system initialization status
  *
  *  @pre    app_main()
- *  @post   system is prepared for application
+ *  @post   system is initialized & prepared for application
  */
 /**************************************************************************************************/
 status_code system_initialize(void) {
@@ -43,6 +47,7 @@ status_code system_initialize(void) {
 
     //--------------------------------------- Init Console ---------------------------------------// 
 
+    //Header
     printf("\n\n\n");
     printf("//****************************************************************************//\n");
     printf("//                                                                            //\n");
@@ -51,6 +56,9 @@ status_code system_initialize(void) {
 
     
     //----------------------------------------- Init MCU -----------------------------------------// 
+    mcu_initialize();
+
+    //Detail
     mcu_print_info();
             
 
@@ -59,7 +67,7 @@ status_code system_initialize(void) {
 
 
     //Notify
-    printf("system_initialize(): System is prepared for application.\n");
+    printf("system_initialize(): System is prepared for application.\n\n");
 
     return STATUS_OK;
 }
@@ -84,3 +92,4 @@ void delay_ms(int t_ms) {
 
     return;
 }
+

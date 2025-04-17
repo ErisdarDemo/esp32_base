@@ -31,7 +31,10 @@
 			"stdbool.h": "c",
 			"esp_system.h": "c",
 			"utils.h": "c",
-			"system.h": "c"
+			"system.h": "c",
+			"main.h": "c",
+			"mcu.h": "c"
 		},
+		"editor.rulers": [100],
 	}
 }
