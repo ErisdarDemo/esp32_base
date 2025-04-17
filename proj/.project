@@ -44,6 +44,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/appl/demo.c</locationURI>
 		</link>
 		<link>
+			<name>appl/demo.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/appl/demo.cpp</locationURI>
+		</link>
+		<link>
 			<name>appl/demo.h</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/appl/demo.h</locationURI>

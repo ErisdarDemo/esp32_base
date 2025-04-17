@@ -71,6 +71,7 @@ void app_main(void) {
     
     //Locals
     int ctr = 0;                                    /* loop counter                               */
+	//Demo d  = Demo();
 
     
     //-------------------------------------- Initialization --------------------------------------//
