@@ -1,5 +1,5 @@
 /**************************************************************************************************/
-/** @file     main.c
+/** @file     main.cpp
  *  @brief    ESP32 Base Project Template
  *  @details  For new ESP32 development
  *
@@ -10,7 +10,7 @@
  *  @note   Private functions & variables are declared static
  *
  *  @section    Opens
- *      Extension to C++
+ *      C++ include issue 'CPP_COMPILE_ISSUE'
  *      Research having just one .vscode subdir at root of project
  *
  *  @section    Legal Disclaimer
@@ -25,12 +25,13 @@
 //************************************************************************************************//
 
 //Standard Library Includes
-#include <stdio.h>
+#include <cstdio>
 
 //Project Includes
 #include "system.h"
 
 //Application Includes
+#include "main.h"
 #include "demo.h"
 
 
@@ -44,6 +45,7 @@
 #define SLEEP_DELAY_MS      (2000)                  /* nice loop delay for runtime demo           */
 
 //Demo
+#define INIT_CTR_VAL        (0)                     /* up-count                                   */
 #define MAX_LOOP_CT         (5)                     /* reset after a few loops                    */
 
 
@@ -67,35 +69,48 @@
  *  @post   no return
  */
 /**************************************************************************************************/
-void app_main(void) {
-    
-    //Locals
-    int ctr = 0;                                    /* loop counter                               */
+extern "C" void app_main(void) {
 
-    
+    //Locals
+    int ctr;                                        /* loop counter                               */
+    int val;                                        /* demo read value                            */            
+    Demo d;                                         /* sample object instance                     */
+
+
+    //Init Variables
+    d     = Demo(); 
+    ctr   = INIT_CTR_VAL;
+
+
     //-------------------------------------- Initialization --------------------------------------//
 
-    //Init
+    //Init System
     system_initialize();
 
-   
+  
     //--------------------------------------- Application ----------------------------------------//
+
+    //Inspect
+    val = d.readData();                             /* sample object routine                      */
+
+    //Report
+    printf("    d.readData(): %d\n\n", val);
+
+
+    //Loop
+    printf("Beginning Application\n\n");
 
     for(;;) {
 
         //------------------------------------- Update -------------------------------------------//
         
         //C Operate 
-        demo_routine(ctr);
-        
-        //Notify
-        printf("Hello from app_main [1] - %d\n\n", ctr++);
-
+        app_routine(ctr);
         
         //------------------------------------- Reset --------------------------------------------//
 
         //Catch
-        if(ctr > MAX_LOOP_CT) {
+        if(++ctr > MAX_LOOP_CT) {
             break;
         }
 

@@ -29,11 +29,15 @@ typedef enum {
 //                                       FUNCTION DECLARATIONS                                    //
 //************************************************************************************************//
 
+#ifdef CPP_COMPILE_ISSUE                            /* @open at loc in main.h for C++ incl now?   */
+
 //Public
-extern status_code system_initialize(void);         /* and section divs (e.g. 'DECLARATIONS' here)
-                                                       are also not recommended for lightweight 
-                                                       interface files like this either - 'KISS'  */
-extern void delay_ms(int t_ms);
+    extern status_code system_initialize(void);     /* and section divs (e.g. 'DECLARATIONS' here)
+                                                     are also not recommended for lightweight 
+                                                     interface files like this either - 'KISS'    */
+    extern "C" void delay_ms(int t_ms);
+
+#endif
 
 
 #endif /* CORE_SYSTEM_SYSTEM_H_ */

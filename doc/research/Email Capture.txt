@@ -1,0 +1,17 @@
+@brief 		Email Capture
+@details 	C++ demo
+@auth 		Justin Reina
+@date 		4/17/25
+
+
+@section 	Notes
+
+	1. Its alreasy there!
+	2. DemoClass example (demo.cpp)
+	3. demo_routine() example (demo.c)
+	4. Interface file with usage for either (demo.h)
+	5. app_main uses both!
+
+	KISS - can go either way
+
+	Ensure espressif repo above is captured appropriately

@@ -22,4 +22,6 @@ ESP32 Base Project for new development
 
 # Version History
 
+- v2 - Initial C++ application template
+
 - v1 - Initial C application template

@@ -39,9 +39,14 @@
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
-			<name>appl/demo.c</name>
+			<name>appl/app.c</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/appl/demo.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/appl/app.c</locationURI>
+		</link>
+		<link>
+			<name>appl/demo.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/appl/demo.cpp</locationURI>
 		</link>
 		<link>
 			<name>appl/demo.h</name>
@@ -54,9 +59,9 @@
 			<locationURI>PARENT-1-PROJECT_LOC/core/CMakeLists.txt</locationURI>
 		</link>
 		<link>
-			<name>core/main.c</name>
+			<name>core/main.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/core/main.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/core/main.cpp</locationURI>
 		</link>
 		<link>
 			<name>core/main.h</name>
