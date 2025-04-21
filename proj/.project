@@ -119,9 +119,19 @@
 			<locationURI>PARENT-1-PROJECT_LOC/core/rtos/rtos.h</locationURI>
 		</link>
 		<link>
-			<name>core/system/system.c</name>
+			<name>core/system/log.cpp</name>
 			<type>1</type>
-			<locationURI>PARENT-1-PROJECT_LOC/core/system/system.c</locationURI>
+			<locationURI>PARENT-1-PROJECT_LOC/core/system/log.cpp</locationURI>
+		</link>
+		<link>
+			<name>core/system/log.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/core/system/log.h</locationURI>
+		</link>
+		<link>
+			<name>core/system/system.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/core/system/system.cpp</locationURI>
 		</link>
 		<link>
 			<name>core/system/system.h</name>

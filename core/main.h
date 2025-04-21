@@ -25,13 +25,28 @@
 //Public    
 extern "C" {
 
-    //demo.h
+    //------------------------------------------ demo.h ------------------------------------------//
+    
     extern "C" void app_routine(int ct);
 
-    //system.h
+
+    //----------------------------------------- system.h -----------------------------------------//
+    
     extern "C" status_code system_initialize(void);
     
     extern "C" void delay_ms(int t_ms);
+    
+    
+    //------------------------------------------ mcu.c -------------------------------------------//
+    
+    extern "C" status_code mcu_initialize(void);
+    
+    extern "C" void mcu_print_info(void);
+            
+            
+    //------------------------------------------ rtos.c ------------------------------------------//
+    extern "C" void rtos_init(void);
+
 }
 
 

@@ -1,14 +1,11 @@
 /**************************************************************************************************/
-/** @file       source.h
- *  @brief      source.c interface API 
- *  @details    interface file header is typically omitted in preference for source file header
- *
- *  @section    Opens
- *      joint function use from source.c & source.cpp in compilation
+/** @file       log.h
+ *  @brief      x 
+ *  @details    x
  */
 /**************************************************************************************************/
-#ifndef DIR_SOURCE_H
-#define DIR_SOURCE_H
+#ifndef DIR_LOG_H
+#define DIR_LOG_H
 
 //************************************************************************************************//
 //                                            INCLUDES                                            //
@@ -50,7 +47,7 @@
 //************************************************************************************************//
 
 //Public
-extern "C" int source_routine(void);
+
 
 //Private
 
@@ -61,39 +58,31 @@ extern "C" int source_routine(void);
 using namespace std;
 
 /**************************************************************************************************/
-/** @fcn        class Source
+/** @fcn        class Log
  *  @brief      x
  *  @details    x
  */
 /**************************************************************************************************/
-class Source {
+class Log {
 
 public:
 
-    //Public Variables
-    int width;
-    int length;
-    int height;
-
     //Constructors
-    Source(void);
-
-    Source(int width, int length, int height);
+    Log(void);
 
     //Public Methods
     void init(void);
 
-    int readData(void);
 
-    void writeData(int data);
+    void write(string msg);
 
 private:
 
     //Private Methods
-    void source_log(string msg, int val);
+    void print_log(string msg, string msgStr);
 
 };
 
 
-#endif /*  DIR_SOURCE_H */
+#endif /*  DIR_LOG_H */
 

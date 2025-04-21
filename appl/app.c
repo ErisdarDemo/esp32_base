@@ -3,7 +3,7 @@
  *  @brief      Application demo example
  *  @details    x
  *
- *	@note  ESP-IDF does not support same name for C & C++ files (e.g. no demo.cpp AND demo.c)
+ *  @note  ESP-IDF does not support same name for C & C++ files (e.g. no demo.cpp AND demo.c)
  */
 /**************************************************************************************************/
 

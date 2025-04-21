@@ -14,6 +14,7 @@ using namespace std;
 #include <cstdio>
 
 //Project Includes
+#include "system.h"
 #include "demo.h"
 
 
@@ -133,8 +134,14 @@ void Demo::writeData(int data) {
 /**************************************************************************************************/
 void Demo::log(char *msg) {
         
+     //Locals
+     char buff[100];
+     
+     //Prepare Log Message
+     sprintf(&buff[0], "log: %s\n", msg);
+        
     //Replace with actual log records
-    printf("log: %s\n", msg);
+    System::log(buff);
     
     return;
 }

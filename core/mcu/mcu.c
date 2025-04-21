@@ -2,6 +2,9 @@
 /** @file     mcu.c
  *  @brief    Microcontroller operations & utility
  *  @details  x
+ *
+ *  @section    Opens
+ *      #ifdef EXPECTED
  */
 /**************************************************************************************************/
 
@@ -22,7 +25,21 @@
 #include "freertos/task.h"
 
 //Project Includes
+#ifdef EXPECTED
+
 #include "system.h"
+
+#else
+
+typedef enum {
+    STATUS_OK          = 0,
+    STATUS_WARN        = 1,
+    STATUS_ERR         = 2,
+    STATUS_ERR_STATE_A = 3,
+    STATUS_ERR_STATE_B = 4,
+} status_code;
+
+#endif
 
 
 //************************************************************************************************//

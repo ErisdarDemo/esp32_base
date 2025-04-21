@@ -10,6 +10,8 @@
  *  @note   Private functions & variables are declared static
  *
  *  @section    Opens
+ *      Integrate System() class modularization
+ *      Integrate Log() class modularization
  *      C++ include issue 'CPP_COMPILE_ISSUE'
  *      Research having just one .vscode subdir at root of project
  *
@@ -85,7 +87,7 @@ extern "C" void app_main(void) {
     //-------------------------------------- Initialization --------------------------------------//
 
     //Init System
-    system_initialize();
+    System::initialize();
 
   
     //--------------------------------------- Application ----------------------------------------//
@@ -115,7 +117,7 @@ extern "C" void app_main(void) {
         }
 
         //Delay
-        delay_ms(SLEEP_DELAY_MS);
+        System::delay_ms(SLEEP_DELAY_MS);
     }
 }
 

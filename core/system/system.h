@@ -1,5 +1,17 @@
-#ifndef CORE_SYSTEM_SYSTEM_H_
-#define CORE_SYSTEM_SYSTEM_H_
+#ifndef DIR_SYSTEM_H
+#define DIR_SYSTEM_H
+
+//************************************************************************************************//
+//                                            INCLUDES                                            //
+//************************************************************************************************//
+
+//Standard Library Includes
+#include <string>
+
+//Project Includes
+#include "system.h"
+#include "log.h"
+
 
 //************************************************************************************************//
 //                                        DEFINITIONS & TYPES                                     //
@@ -26,19 +38,37 @@ typedef enum {
 
 
 //************************************************************************************************//
-//                                       FUNCTION DECLARATIONS                                    //
+//                                         CLASS DECLARATIONS                                     //
 //************************************************************************************************//
+using namespace std;
 
-#ifdef CPP_COMPILE_ISSUE                            /* @open at loc in main.h for C++ incl now?   */
+/**************************************************************************************************/
+/** @fcn        class System
+ *  @brief      x
+ *  @details    x
+ */
+/**************************************************************************************************/
+class System {
 
-//Public
-    extern status_code system_initialize(void);     /* and section divs (e.g. 'DECLARATIONS' here)
-                                                     are also not recommended for lightweight 
-                                                     interface files like this either - 'KISS'    */
-    extern "C" void delay_ms(int t_ms);
+public:
 
-#endif
+    //Public Methods
+    static status_code initialize(void);
+    
+    static void delay_ms(int t_ms);
+    
+    static void log(char *msg);
+
+private:
+
+    //Private Variables
+    static Log logger;                                      /* logging utility for system                 */
+
+    //Private Methods
+    static void system_log(string msg, int val);
+
+};
 
 
-#endif /* CORE_SYSTEM_SYSTEM_H_ */
+#endif /*  DIR_SYSTEM_H */
 

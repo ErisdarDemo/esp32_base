@@ -1,10 +1,10 @@
 /**************************************************************************************************/
-/** @file       system.c
- *  @brief      System operations & utility
+/** @file       system.cpp
+ *  @brief      x
  *  @details    x
  *
- * @section     Opens
- *      system_getStatus()
+ *  @section    Opens
+ *      none listed
  */
 /**************************************************************************************************/
 
@@ -13,21 +13,28 @@
 //************************************************************************************************//
 
 //Standard Library Includes
-#include <stdio.h>
+#include <iostream>
+#include <string>
 
 //FreeRTOS Includes
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 
+//BSP Includes
+
 //Project Includes
 #include "mcu.h"
 #include "rtos.h"
 #include "system.h"
+#include "log.h"
+#include "main.h"
 
 
 //************************************************************************************************//
-//                                          PUBLIC FUNCTIONS                                      //
+//                                       FUNCTION DECLARATIONS                                    //
 //************************************************************************************************//
+using namespace std;
+
 
 /**************************************************************************************************/
 /** @fcn        status_code system_initialize(void)
@@ -40,11 +47,12 @@
  *  @post   system is initialized & prepared for application
  */
 /**************************************************************************************************/
-status_code system_initialize(void) {
-
-    //Locals
-
-
+status_code System::initialize(void) {
+    
+    //Initialize Variables
+    logger = Log();
+    
+    
     //--------------------------------------- Init Console ---------------------------------------// 
 
     //Header
@@ -69,9 +77,9 @@ status_code system_initialize(void) {
     //Notify
     printf("system_initialize(): System is prepared for application.\n\n");
 
+
     return STATUS_OK;
 }
-
 
 
 /**************************************************************************************************/
@@ -81,11 +89,11 @@ status_code system_initialize(void) {
  *
  *  @param [in] (int) t_ms - delay time, milliseconds
  *
- *  @pre    system_initialize()
+ *  @pre    System.initialize()
  *  @post   x
  */
 /**************************************************************************************************/
-void delay_ms(int t_ms) {
+void System::delay_ms(int t_ms) {
 
     //Delay
     vTaskDelay(t_ms / portTICK_PERIOD_MS);
@@ -93,3 +101,49 @@ void delay_ms(int t_ms) {
     return;
 }
 
+
+/**************************************************************************************************/
+/** @fcn        void log(char *msg)
+ *  @brief      log to the system log files
+ *  @details    x
+ *
+ *  @param [in] (char *) msg - message to record
+ *
+ *  @pre    System.initialize()
+ *  @post   x
+ */
+/**************************************************************************************************/
+void System::log(char *msg) {
+
+    //Write to log
+    logger.write(msg);
+
+    return;
+}
+
+
+//************************************************************************************************//
+//                                        PRIVATE COMPONENTS                                      //
+//************************************************************************************************//
+
+/**************************************************************************************************/
+/** @fcn        static void system_log(std::string msg, int val)
+ *  @brief      Record content to system log utilities
+ *  @details    x
+ *
+ *  @param    [in] (char *) msg - x
+ *  @param    [in] (int) val - x
+ *
+ *  @pre    System.initialize()
+ *  @post   x
+ *
+ *  @note   naming selected here to minimize naming conflict risks for this general demonstration
+ */
+/**************************************************************************************************/
+void System::system_log(string msg, int val) {
+
+    //Record to Log
+    printf(msg.c_str(), val);
+
+    return;
+}
