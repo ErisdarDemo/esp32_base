@@ -41,7 +41,7 @@ void rtos_init(void) {
     
     
     //Notify
-    printf("rtos_init(): RTOS is initialized and prepared for use\n\n");
+    printf("rtos_init(): RTOS is initialized and prepared for application\n\n");
     
     return;
 }

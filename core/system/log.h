@@ -1,9 +1,3 @@
-/**************************************************************************************************/
-/** @file       log.h
- *  @brief      x 
- *  @details    x
- */
-/**************************************************************************************************/
 #ifndef DIR_LOG_H
 #define DIR_LOG_H
 
@@ -14,12 +8,6 @@
 //Standard Library Includes
 #include <string>
 
-//Library Includes
-
-//BSP Includes
-
-//Project Includes
-
 
 //************************************************************************************************//
 //                                        DEFINITIONS & TYPES                                     //
@@ -27,29 +15,27 @@
 
 //-----------------------------------------  Definitions -----------------------------------------//
 
-
-//-------------------------------------------- Macros --------------------------------------------//
-
-
-//----------------------------------------- Enumerations -----------------------------------------//
+//Typedef Lengths
+#define NUM_LOG_MESSAGE_TYPE        (9)
 
 
 //------------------------------------------- Typedefs -------------------------------------------//
 
-
-//************************************************************************************************//
-//                                            VARIABLES                                           //
-//************************************************************************************************//
-
-
-//************************************************************************************************//
-//                                       FUNCTION DECLARATIONS                                    //
-//************************************************************************************************//
-
-//Public
-
-
-//Private
+/**
+ * @brief       General system status codes
+ * @details     Naming generic for re-use
+ */
+typedef enum {
+    LOG_TYPE_A             = 8,                     /* @open descr                                */
+    LOG_TYPE_B             = 7,                     /* @open descr                                */
+    LOG_TYPE_C             = 6,                     /* @open descr                                */
+    LOG_TYPE_SYSTEM        = 5,                     /* System module log content                  */
+    LOG_TYPE_RTOS          = 4,                     /* Rtos module log content                    */
+    LOG_TYPE_APP           = 3,                     /* Application general log content            */
+    LOG_TYPE_UTIL          = 2,                     /* Utilities module log content               */
+    LOG_TYPE_GENERAL       = 1,                     /* General unspecified log content            */
+    LOG_TYPE_UNSPECIFIED   = 0                      /* Unspecified location log content           */
+} Log_message_type;
 
 
 //************************************************************************************************//
@@ -71,15 +57,9 @@ public:
     Log(void);
 
     //Public Methods
-    void init(void);
+    static void init(void);
 
-
-    void write(string msg);
-
-private:
-
-    //Private Methods
-    void print_log(string msg, string msgStr);
+    static void write(Log_message_type src, string msg);
 
 };
 

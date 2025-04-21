@@ -19,6 +19,7 @@
 
 //-----------------------------------------  Definitions -----------------------------------------//
 
+//Typedef Lengths
 #define NUM_SYSTEM_STATUS_CODES     (5)
 
 
@@ -32,8 +33,8 @@ typedef enum {
     STATUS_OK          = 0,
     STATUS_WARN        = 1,
     STATUS_ERR         = 2,
-    STATUS_ERR_STATE_A = 3,
-    STATUS_ERR_STATE_B = 4,
+    STATUS_ERR_STATE_A = 3,                         /* @open descr                                */
+    STATUS_ERR_STATE_B = 4,                         /* @open descr                                */
 } status_code;
 
 
@@ -57,16 +58,12 @@ public:
     
     static void delay_ms(int t_ms);
     
-    static void log(char *msg);
+    static void log(string msg);
 
 private:
 
     //Private Variables
-    static Log logger;                                      /* logging utility for system                 */
-
-    //Private Methods
-    static void system_log(string msg, int val);
-
+    static Log logger;                              /* logging utility for system                 */
 };
 
 

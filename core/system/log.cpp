@@ -2,8 +2,12 @@
 /** @file       log.cpp
  *  @brief      x
  *  @details    x
+ *
+ *  @section    Opens
+ *      convert log naming lookup to map
  */
 /**************************************************************************************************/
+using namespace std;
 
 //************************************************************************************************//
 //                                            INCLUDES                                            //
@@ -12,10 +16,6 @@
 //Standard Library Includes
 #include <iostream>
 #include <string>
-
-//Library Includes
-
-//BSP Includes
 
 //Project Includes
 #include "log.h"
@@ -26,20 +26,6 @@
 //************************************************************************************************//
 
 //-----------------------------------------  Definitions -----------------------------------------//
-
-
-//-------------------------------------------- Macros --------------------------------------------//
-
-
-//----------------------------------------- Enumerations -----------------------------------------//
-
-
-//------------------------------------------- Typedefs -------------------------------------------//
-
-
-//************************************************************************************************//
-//                                            VARIABLES                                           //
-//************************************************************************************************//
 
 
 //************************************************************************************************//
@@ -83,49 +69,66 @@ void Log::init(void) {
 
 
 /**************************************************************************************************/
-/** @fcn        write(string msg)
+/** @fcn        write(Log_message_type src, string msg)
  *  @brief      x
  *  @details    x
  *
+ *  @param    [in]  (Log_message_type) src - source of log message
  *  @param    [in]  (string) msg - message to record to log file
  *
  *  @return   (type) descrip
  *
  *  @pre    x
  *  @post   x
+ *  
+ *  @section    Opens
+ *      Can you overload with just one input arg?
+ *      Enter time into log
+ *      overload the input here to cascade vars (e.g. "%d")
+ *      log to SD? log with Espressif log api?
  */
 /**************************************************************************************************/
-void Log::write(string msg) {
+void Log::write(Log_message_type src, string msg) {
+
+    //Locals
+    string src_id;                                  /* identified description string for src      */
+
+    //Lookup Id
+    switch(src) {
+        case LOG_TYPE_A:
+            src_id = "Event-A";
+            break;
+        case LOG_TYPE_B:
+            src_id = "Event-B";
+            break;
+        case LOG_TYPE_C:
+            src_id = "Event-C";
+            break;
+        case LOG_TYPE_SYSTEM:
+            src_id = "System";
+            break;
+        case LOG_TYPE_RTOS:
+            src_id = "Rtos";
+            break;
+        case LOG_TYPE_APP:
+            src_id = "App";
+            break;
+        case LOG_TYPE_UTIL:
+            src_id = "Util";
+            break;
+        case LOG_TYPE_GENERAL:
+            src_id = "General";
+            break;
+        case LOG_TYPE_UNSPECIFIED:
+            src_id = "Unspecified";
+            break;
+        default:
+            src_id = "Unknown";
+    }
 
     //Record
-    Log::print_log("logging: %s\n\n", msg);
+    printf("%s: %s", src_id.c_str(), msg.c_str());
 
     return;
 }
 
-
-//************************************************************************************************//
-//                                        PRIVATE COMPONENTS                                      //
-//************************************************************************************************//
-
-/**************************************************************************************************/
-/** @fcn        static void print_log(std::string msg, string msgStr)
- *  @brief      Record content to source log utilities
- *  @details    x
- *
- *  @param    [in] (char *) msg - x
- *  @param    [in] (string) msgStr - x
- *
- *  @pre    System.initialize()
- *  @post   x
- *
- *  @note   naming selected here to minimize naming conflict risks for this general demonstration
- */
-/**************************************************************************************************/
-void Log::print_log(string msg, string msgStr) {
-
-    //Record to Log
-    printf(msg.c_str(), msgStr);
-
-    return;
-}

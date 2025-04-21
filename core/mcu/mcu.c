@@ -72,7 +72,7 @@ status_code mcu_initialize(void) {
 
 
     //Notify
-    printf("mcu_initialize(): MCU is prepared for application\n\n");
+    printf("mcu_initialize(): MCU is prepared for application.\n\n");
 
     return STATUS_OK;
 }

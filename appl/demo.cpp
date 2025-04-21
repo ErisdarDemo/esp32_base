@@ -82,6 +82,9 @@ void Demo::init(void) {
  *
  *  @pre    this->init()
  *  @post   x
+ *
+ *  @section    Opens
+ *      Use log for print statements
  */
 /**************************************************************************************************/
 int Demo::readData(void) {
@@ -89,7 +92,7 @@ int Demo::readData(void) {
     //Read data from the peripheral
         
     //Notify
-    printf("Reading data from peripheral...\n\n");
+    printf("Demo.readData(): Reading data from peripheral...\n\n");
    
     return DEFAULT_READ_VAL;
 }
@@ -104,6 +107,9 @@ int Demo::readData(void) {
  *
  *  @pre    this->init()
  *  @post   x
+ *
+ *  @section    Opens
+ *      Use log for print statements
  */
 /**************************************************************************************************/
 void Demo::writeData(int data) {
