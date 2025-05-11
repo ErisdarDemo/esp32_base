@@ -83,7 +83,7 @@ static DriverConfig driverCfg;                      /* configuration parameter f
  *  @post   Driver is initialized for user
  *
  *  @section    Opens
- *  	Define & implement routine
+ *      Define & implement routine
  *      Consider reporting status on post console/log report
  */
 /**************************************************************************************************/
@@ -113,8 +113,8 @@ void driver_init(DriverConfig *cfg) {
  *  @pre    driver_init()
  *  @post   peripheral is enabled for use & output is enabled
  *  
- *  @section 	Opens
- *  	Define & implement routine
+ *  @section    Opens
+ *      Define & implement routine
  */
 /**************************************************************************************************/
 void driver_enable(void) {
@@ -131,8 +131,8 @@ void driver_enable(void) {
  *  @pre    driver_init()
  *  @post   peripheral is disabled from use & output is disabled
  *  
- *  @section 	Opens
- *  	Define & implement routine
+ *  @section    Opens
+ *      Define & implement routine
  */
 /**************************************************************************************************/
  void driver_disable(void) {
@@ -149,8 +149,8 @@ void driver_enable(void) {
  *  @pre    driver_init()
  *  @post   Peripheral is operational & running
  *  
- *  @section 	Opens
- *  	Define & implement routine
+ *  @section    Opens
+ *      Define & implement routine
  */
 /**************************************************************************************************/
 void driver_start(void) {
@@ -176,8 +176,8 @@ void driver_start(void) {
  *  @pre    driver_init()
  *  @post   Peripheral is stopped from operation
  *  
- *  @section 	Opens
- *  	Define & implement routine
+ *  @section    Opens
+ *      Define & implement routine
  */
 /**************************************************************************************************/
 void driver_stop(void) {
@@ -196,8 +196,8 @@ void driver_stop(void) {
  *  @pre    any
  *  @post   x
  *  
- *  @section 	Opens
- *  	Define & implement state & routine
+ *  @section    Opens
+ *      Define & implement state & routine
  */
 /**************************************************************************************************/
 void *driver_status(void) {
@@ -214,8 +214,8 @@ void *driver_status(void) {
  *  @pre    driver_init()
  *  @post   Peripheral is reset to its initial state condition
  *  
- *  @section 	Opens
- *  	Define & implement state & routine
+ *  @section    Opens
+ *      Define & implement state & routine
  */
 /**************************************************************************************************/
 void driver_reset(void) {
@@ -234,8 +234,8 @@ void driver_reset(void) {
  *  @pre    driver_init()
  *  @post   config value is applied to the peripheral
  *  
- *  @section 	Opens
- *  	Define & implement state & routine
+ *  @section    Opens
+ *      Define & implement state & routine
  */
 /**************************************************************************************************/
 void driver_setConfig(DriverConfig *cfg) {
@@ -276,8 +276,8 @@ DriverConfig *driver_getConfig(void) {
  *  @pre    any
  *  @post   x
  *
- *  @section 	Opens
- *  	Define & implement state & routine
+ *  @section    Opens
+ *      Define & implement state & routine
  */
 /**************************************************************************************************/
 void *driver_getInfo(void) {
@@ -296,8 +296,8 @@ void *driver_getInfo(void) {
  *  @pre    any
  *  post    x
  *
- *  @section 	Opens
- *  	Define & implement state & routine
+ *  @section    Opens
+ *      Define & implement state & routine
  */
 /**************************************************************************************************/
 int driver_getState(void) {
@@ -316,8 +316,8 @@ int driver_getState(void) {
  *  @pre    driver_init()
  *  @post   state value update is applied to the peripheral
  *
- *  @section 	Opens
- *  	Define & implement state & routine
+ *  @section    Opens
+ *      Define & implement state & routine
  */
 /**************************************************************************************************/
  void driver_setState(int val) {
@@ -336,8 +336,8 @@ int driver_getState(void) {
  *  @pre    driver_init()
  *  @post   x
  *
- *  @section 	Opens
- *  	Define & implement state & routine
+ *  @section    Opens
+ *      Define & implement state & routine
  */
 /**************************************************************************************************/
 int driver_read(void) {
@@ -356,8 +356,8 @@ int driver_read(void) {
  *  @pre    driver_init()
  *  @post   written value is applied to the peripheral
  *
- *  @section 	Opens
- *  	Define & implement state & routine
+ *  @section    Opens
+ *      Define & implement state & routine
  */
 /**************************************************************************************************/
 void driver_write(int val) {
@@ -375,8 +375,8 @@ void driver_write(int val) {
  *  
  *  @pre    driver_init()
  *
- *  @section 	Opens
- *  	Define & implement state & routine
+ *  @section    Opens
+ *      Define & implement state & routine
  */
 /**************************************************************************************************/
 void *driver_getLog(void) {
@@ -396,8 +396,8 @@ void *driver_getLog(void) {
  *  @pre    driver_init()
  *  @post   interrupt vector is reset
  *
- *  @section 	Opens
- *  	Define & implement state & routine
+ *  @section    Opens
+ *      Define & implement state & routine
  */
 /**************************************************************************************************/
 void driver_callback(void) {

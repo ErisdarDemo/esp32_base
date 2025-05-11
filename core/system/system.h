@@ -39,9 +39,9 @@ typedef enum {
 //************************************************************************************************//
 
 //Public
-extern status_code system_initialize(void);			/* and section divs (e.g. 'DECLARATIONS' here)
-													   are also not recommended for lightweight 
-													   interface files like this either - 'KISS'  */
+extern status_code system_initialize(void);         /* and section divs (e.g. 'DECLARATIONS' here)
+                                                       are also not recommended for lightweight 
+                                                       interface files like this either - 'KISS'  */
 extern void delay_ms(int t_ms);
 
 
