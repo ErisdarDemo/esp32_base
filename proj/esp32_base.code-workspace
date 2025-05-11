@@ -15,6 +15,9 @@
         {
             "name": "core",
             "path": "../core"
+        },
+        {
+            "path": "../appl"
         }
     ],
     "settings": {
