@@ -1,14 +1,14 @@
 @brief      Test Procedure & Report
 @details    Build Report, Console & Demo as useful
 @auth       Justin Reina
-@date       3/30/25
+@date       5/10/25
 
 
 @section    Configuration
 
      DUT: Freenove ESP32-S3 WROOM
      
-    ICSP: USB-OTG ('JTAG')
+    ICSP: USB-OTG ('UART') (JTAG not working right now)
     
 @section    Demo 
 

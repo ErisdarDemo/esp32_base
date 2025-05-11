@@ -1,17 +1,16 @@
 /**************************************************************************************************/
 /** @file     main.c
- *  @brief    ESP32 Base Project Template
+ *  @brief    ESP32 Base C Project Template
  *  @details  For new ESP32 development
  *
  *  @author   Justin Reina, Firmware Engineer
  *  @created  4/16/25
- *  @last rev 4/16/25
+ *  @last rev 5/10/25
  *
  *  @note   Private functions & variables are declared static
  *
  *  @section    Opens
  *      Extension to C++
- *      Research having just one .vscode subdir at root of project
  *
  *  @section    Legal Disclaimer
  *      ©2025 Justin Reina. All rights reserved. All contents of this source file and/or any other
@@ -27,18 +26,8 @@
 //Standard Library Includes
 #include <stdio.h>
 
-//SDK Includes
-#include "sdkconfig.h"
-
-//FreeRTOS Includes
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-
 //Project Includes
-#include "main.h"
-#include "mcu.h"
 #include "system.h"
-#include "utils.h"
 
 //Application Includes
 #include "demo.h"
@@ -99,7 +88,7 @@ void app_main(void) {
         demo_routine(ctr);
         
         //Notify
-        printf("Hello from app_main [1] - %d\n\n", ctr++);
+        printf("app_main(): loop %d\n\n", ctr++);
 
         
         //------------------------------------- Reset --------------------------------------------//

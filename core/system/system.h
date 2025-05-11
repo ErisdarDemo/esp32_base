@@ -2,15 +2,6 @@
 #define CORE_SYSTEM_SYSTEM_H_
 
 //************************************************************************************************//
-//                                            INCLUDES                                            //
-//************************************************************************************************//
-
-//FreeRTOS Includes
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-
-
-//************************************************************************************************//
 //                                        DEFINITIONS & TYPES                                     //
 //************************************************************************************************//
 
@@ -22,8 +13,8 @@
 //------------------------------------------- Typedefs -------------------------------------------//
 
 /**
- * @brief       General System Status Codes
- * @details     Naming left generic for wider application use
+ * @brief       General system status codes
+ * @details     Naming generic for re-use
  */
 typedef enum {
     STATUS_OK          = 0,
@@ -46,3 +37,4 @@ extern void delay_ms(int t_ms);
 
 
 #endif /* CORE_SYSTEM_SYSTEM_H_ */
+
