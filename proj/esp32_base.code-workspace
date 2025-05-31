@@ -15,10 +15,14 @@
         {
             "name": "core",
             "path": "../core"
+        },
+        {
+            "name": "appl",
+            "path": "../appl"
         }
     ],
     "settings": {
-        "window.title": "esp32_proj",
+        "window.title": "esp32_base",
         "files.associations": {
             "task.h": "c",
             "freertos.h": "c",

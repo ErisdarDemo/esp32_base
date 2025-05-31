@@ -15,7 +15,8 @@
     Run the application in debug mode through Espressif-IDE, capturing the console output to PuTTy or VS-Code Terminal.
 
 @section    Notes
-    x
+    
+	Use UART for ICSP when JTAG is not working
 
 @section    Detail
     x
