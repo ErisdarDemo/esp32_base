@@ -1,3 +1,4 @@
 CompileFlags:
-  CompilationDatabase: D:\Documents\MyWorkspaces\Espressif\esp32_proj\proj\build
+  CompilationDatabase: build
   Remove: [-m*, -f*]
+InlayHints: {Enabled: No}

@@ -1,23 +1,41 @@
 {
   "configurations": [
     {
-      "name": "ESP-IDF",
-      "compilerPath": "${config:idf.toolsPathWin}\\tools\\xtensa-esp-elf\\esp-14.2.0_20241119\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe",
-      "compileCommands": "${config:idf.buildPath}/compile_commands.json",
-      "includePath": [
-        "${config:idf.espIdfPath}/components/**",
-        "${config:idf.espIdfPathWin}/components/**",
-        "${workspaceFolder}/**"
-      ],
-      "browse": {
-        "path": [
-          "${config:idf.espIdfPath}/components",
-          "${config:idf.espIdfPathWin}/components",
-          "${workspaceFolder}"
+        "name": "ESP-IDF",
+        "compilerPath": "${config:idf.toolsPathWin}\\tools\\xtensa-esp-elf\\esp-14.2.0_20241119\\xtensa-esp-elf\\bin\\xtensa-esp32s3-elf-gcc.exe",
+        "compileCommands": "${config:idf.buildPath}/compile_commands.json",
+        "includePath": [
+          "${workspaceFolder}/**",
+          "../lbr",
+          "build/config",
+          "C:/Sw/Espressif/frameworks/esp-idf-v5.4.1/components/esp_hw_support/include",
+          "C:/Sw/Espressif/frameworks/esp-idf-v5.4.1/components/spi_flash/include",
+          "C:/Sw/Espressif/frameworks/esp-idf-v5.4.1/components/esp_system/include",
+          "C:/Sw/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/config/include/freertos",
+          "C:/Sw/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/config/xtensa/include/freertos",
+          "C:/Sw/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/config/xtensa/include",
+          "C:/Sw/Espressif/frameworks/esp-idf-v5.4.1/components/freertos/FreeRTOS-Kernel/include",
+          "C:/Sw/Espressif/frameworks/esp-idf-v5.4.1/components/xtensa/include"
         ],
+        "defines": [
+          "_DEBUG",
+          "UNICODE",
+          "_UNICODE"
+        ],
+        "browse": {
+          "path": [
+            "${config:idf.espIdfPath}/components",
+            "${config:idf.espIdfPathWin}/components",
+            "${workspaceFolder}"
+          ],
+	    }
         "limitSymbolsToIncludedHeaders": true
-      }
-    }
-  ],
-  "version": 4
+        "windowsSdkVersion": "10.0.22621.0",
+        "compilerPath": "cl.exe",
+        "cStandard": "c17",
+        "cppStandard": "c++17",
+        "intelliSenseMode": "windows-msvc-x64"
+	  },
+    ],
+    "version": 4
 }

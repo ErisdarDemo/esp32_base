@@ -19,6 +19,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>appl</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
 			<name>core</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
@@ -27,6 +32,16 @@
 			<name>lbr</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>appl/demo.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/appl/demo.c</locationURI>
+		</link>
+		<link>
+			<name>appl/demo.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/appl/demo.h</locationURI>
 		</link>
 		<link>
 			<name>core/CMakeLists.txt</name>
@@ -42,6 +57,21 @@
 			<name>core/main.h</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/core/main.h</locationURI>
+		</link>
+		<link>
+			<name>core/mcu</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>core/rtos</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>core/system</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
 		</link>
 		<link>
 			<name>lbr/.vscode</name>
@@ -62,6 +92,36 @@
 			<name>lbr/utils.h</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/lbr/utils.h</locationURI>
+		</link>
+		<link>
+			<name>core/mcu/mcu.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/core/mcu/mcu.c</locationURI>
+		</link>
+		<link>
+			<name>core/mcu/mcu.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/core/mcu/mcu.h</locationURI>
+		</link>
+		<link>
+			<name>core/rtos/rtos.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/core/rtos/rtos.c</locationURI>
+		</link>
+		<link>
+			<name>core/rtos/rtos.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/core/rtos/rtos.h</locationURI>
+		</link>
+		<link>
+			<name>core/system/system.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/core/system/system.c</locationURI>
+		</link>
+		<link>
+			<name>core/system/system.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/core/system/system.h</locationURI>
 		</link>
 		<link>
 			<name>lbr/.vscode/c_cpp_properties.json</name>

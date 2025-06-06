@@ -1,11 +1,11 @@
 ####################################################################################################
 ## @file       .gitignore
- # @brief      ESP32 Template Project gitignore
+ # @brief      ESP32 base C project for new development
  # @details    x
  #
  # @author     Justin Reina, Firmware Engineer
- # @created    5/30/25
- # @last rev   5/30/25
+ # @created    6/6/25
+ # @last rev   6/6/25
  #
  # @section    Opens
  #     none current
