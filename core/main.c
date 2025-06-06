@@ -1,17 +1,22 @@
 /**************************************************************************************************/
 /** @file     main.c
- *  @brief    x
- *  @details  x
+ *  @brief    ESP32 Base C Project Template
+ *  @details  For new ESP32 development
  *
  *  @author   Justin Reina, Firmware Engineer
  *  @created  6/6/25
- *  @last rev 6/6/25 ''
+ *  @last rev 6/6/25
+ *
+ *  @note   Private functions & variables are declared static
  *
  *  @section    Opens
- *      none listed
+ *      Extension to C++
+ *      Unknown argument false report (Espressif-IDE) ?
  *
  *  @section    Legal Disclaimer
- *      x
+ *      ©2025 Justin Reina. All rights reserved. All contents of this source file and/or any other
+ *      related source files are the explicit property of Justin Reina. Do not distribute.
+ *      Do not copy.
  */
 /**************************************************************************************************/
 
@@ -21,29 +26,25 @@
 
 //Standard Library Includes
 #include <stdio.h>
-#include <inttypes.h>
-
-//FreeRTOS Includes
-#include "freertos/FreeRTOS.h"
-#include "freertos/task.h"
-
-//SDK Includes
-#include "sdkconfig.h"
-#include "esp_chip_info.h"
-#include "esp_flash.h"
-#include "esp_log.h"
-#include "esp_system.h"
 
 //Project Includes
-#include "main.h"
+#include "system.h"
+
+//Application Includes
+#include "demo.h"
 
 
 //************************************************************************************************//
-//                                            VARIABLES                                           //
+//                                        DEFINITIONS & TYPES                                     //
 //************************************************************************************************//
 
-//Constants
-static const char* TAG = "esp32_base";
+//-----------------------------------------  Definitions -----------------------------------------//
+
+//Timing
+#define SLEEP_DELAY_MS      (2000)                  /* nice loop delay for runtime demo           */
+
+//Demo
+#define MAX_LOOP_CT         (5)                     /* reset after a few loops                    */
 
 
 //************************************************************************************************//
@@ -53,7 +54,15 @@ static const char* TAG = "esp32_base";
 //-----------------------------------------  Definitions -----------------------------------------//
 
 //Base Template Version
-#define BASE_TEMPL_VERS         "0*"
+#define BASE_TEMPL_VERS         "1"
+
+
+//************************************************************************************************//
+//                                       FUNCTION DECLARATIONS                                    //
+//************************************************************************************************//
+
+//Version API
+static char *baseTempl_getVersion(void);
 
 
 //************************************************************************************************//
@@ -79,70 +88,59 @@ static const char* TAG = "esp32_base";
 void app_main(void) {
     
     //Locals
-    esp_err_t err;                                  /* Espressif status code api                  */
-    esp_chip_info_t chip_info;                      /* Print chip information                     */
-    uint32_t flash_size;
-    
-    
-    //Notify
-    printf("\n\nHello world!\n");
+    int ctr = 0;                                    /* loop counter                               */
 
-    //Check
-    esp_chip_info(&chip_info);
-    
-    printf("This is %s chip with %d CPU core(s), %s%s%s%s, ",
-           CONFIG_IDF_TARGET,
-           chip_info.cores,
-           (chip_info.features & CHIP_FEATURE_WIFI_BGN)   ? "WiFi/" : "",
-           (chip_info.features & CHIP_FEATURE_BT)         ? "BT" : "",
-           (chip_info.features & CHIP_FEATURE_BLE)        ? "BLE" : "",
-           (chip_info.features & CHIP_FEATURE_IEEE802154) ? ", 802.15.4 (Zigbee/Thread)" : "");
-               
-    unsigned major_rev = chip_info.revision / 100;
-    unsigned minor_rev = chip_info.revision % 100;
-    
-    printf("silicon revision v%d.%d, ", major_rev, minor_rev);
-    
-    //Read
-    err = esp_flash_get_size(NULL, &flash_size);
-    
-    //Check
-    ESP_ERROR_CHECK(err);
+	
+	//Notify
+    printf("Demonstration for esp32_base v%s", baseTempl_getVersion());
+	
+	
+    //-------------------------------------- Initialization --------------------------------------//
 
-    //Handle
-    if(err != ESP_OK) {
-        printf("Get flash size failed");
-        return;
-    }
+    //Init
+    system_initialize();
 
-    //Notify
-    printf("%" PRIu32 "MB %s flash\n", flash_size / (uint32_t)(1024 * 1024),
-           (chip_info.features & CHIP_FEATURE_EMB_FLASH) ? "embedded" : "external");
+   
+    //--------------------------------------- Application ----------------------------------------//
+	
+    for(;;) {
 
-    printf("Minimum free heap size: %" PRIu32 " bytes\n", esp_get_minimum_free_heap_size());
-
-    //Demo
-    utils_test_fcn();
-
-    //Loop
-    for (int i = 10; i >= 0; i--) {
+        //------------------------------------- Update -------------------------------------------//
         
-        //Update
-        printf("Restarting in %d seconds...\n", i);
+        //C Operate 
+        demo_routine(ctr);
         
+        //Notify
+        printf("app_main(): loop %d\n\n", ctr++);
+
+        
+        //------------------------------------- Reset --------------------------------------------//
+
+        //Catch
+        if(ctr > MAX_LOOP_CT) {
+            break;
+        }
+
         //Delay
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        delay_ms(SLEEP_DELAY_MS);
     }
-    
-    
-    //Notify
-    printf("Restarting now.\n\n\n\n");
-    
-    ESP_LOGI(TAG, "Demo complete");
-    
-    
-    //Reset
-    fflush(stdout);
-    esp_restart();
 }
 
+
+//************************************************************************************************//
+//                                         PRIVATE FUNCTIONS                                      //
+//************************************************************************************************//
+
+/**************************************************************************************************/
+/** @fcn        char *baseTempl_getVersion(void)
+ *  @brief      Retrieve base template project version
+ *  @details    major.minor.rev suffixed with "*" for in development from that version
+ *
+ *  @return   (char *) string reporting version
+ *
+ *  @note   Derivative identifiers may be omitted (e.g. "*" for published content)
+ */
+/**************************************************************************************************/
+static char *baseTempl_getVersion(void) {
+    return BASE_TEMPL_VERS;
+}
